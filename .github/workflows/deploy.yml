@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   schedule:
-    - cron: '00 12 * * *'
+    - cron: '00 13 * * *'
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
         with:
           cmd: build
       - name: Publish
-        uses: Doarakko/actions/cli@master
+        uses: netlify/actions/cli@master
         with:
           args: deploy --dir=public --prod
         env:
