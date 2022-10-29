@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://json.schemastore.org/github-workflow.json": "file:///Users/yuki.tanaami/repos/team-blog-hub-playground/.github/workflows/deploy.yml"
-    }
-}
