@@ -3,6 +3,9 @@ name: Deploy
 on:
   schedule:
     - cron: '35 9 * * *'
+  repository_dispatch:
+    branches:
+      - main
 
 jobs:
   build:
