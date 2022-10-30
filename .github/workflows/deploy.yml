@@ -16,7 +16,7 @@ jobs:
         with:
           cmd: build
       - name: Publish
-        uses: netlify/actions/cli@master
+        uses: Doarakko/actions/cli@master
         with:
           args: deploy --dir=public --prod
         env:
