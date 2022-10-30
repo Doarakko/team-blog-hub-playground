@@ -9,17 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: install
-      - uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: build
-      - name: Publish
-        uses: Doarakko/actions/cli@master
-        with:
-          args: deploy --dir=public --prod
+      - name: Hook build
+        run: curl -X POST -d '{}' $URL
         env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          URL: ${{ secrets.NETLIFY_BUILD_HOOK_URL }}
