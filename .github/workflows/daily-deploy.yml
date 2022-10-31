@@ -1,9 +1,11 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+
+# on:
+#   schedule:
+#     - cron: '00 20 * * *'
 
 jobs:
   build:
